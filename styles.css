@@ -1,0 +1,429 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.custom-image {
+    display: block;
+    width: 100%; /* Установите нужную ширину */
+    height: 955px; /* Автоматическое масштабирование высоты, чтобы сохранить пропорции */
+   
+}
+
+.offer-section {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 900px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6); /* Полупрозрачный черный фон */
+    color: #fff; /* Цвет текста */
+    text-align: center;
+    border-radius: 20px;
+}
+
+.overlay {
+    z-index: 1; /* Установка z-index, чтобы контент был поверх изображения */
+    transform: translate(-50%, -50%); /* Перемещение контента на 50% от его собственной ширины и высоты */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.content h2 {
+    font-size: 50px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    width: 420px; /* Ширина кнопки */
+    height: 100px; /* Высота кнопки */
+    background-color: #5B6AF1;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-size: 30px;
+    text-align: center;
+    line-height: 100px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+
+.custom-block {
+    position: relative;
+    background-color: #5B6AF1; /* Цвет фона блока */
+    color: #fff; /* Цвет текста */
+    width: 1500px; /* Ширина блока */
+    height: 400px; /* Высота блока */
+    padding: 20px; /* Отступы внутри блока */
+    margin: 20px 0; /* Внешние отступы блока */
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size: 45px;
+    margin-bottom: 102px;
+    margin-left: 50px;
+}
+
+.custom-block::before {
+    content: ""; /* Добавление содержимого для псевдоэлемента */
+    position: absolute; /* Установка абсолютной позиции */
+    top: 0; /* Расположение полоски сверху */
+    left: -4px; /* Расположение полоски слева */
+    width: 4px; /* Ширина полоски */
+    height: 100%; /* Высота полоски (равная высоте родительского блока) */
+    background-color: white; /* Цвет полоски */
+    margin: 12px;
+}
+
+.custom-list {
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    font-size: 40px;
+    font-weight: bold;
+    counter-reset: custom-counter;
+}
+
+.custom-list li {
+    position: relative;
+    padding-left: 120px; /* Отступ слева для текста */
+    margin-bottom: 102px; /* Отступ снизу для каждого элемента списка */
+    margin-left: 50px;
+}
+
+.custom-list li::before {
+    content: counter(custom-counter); /* Показать числа внутри круга */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px; /* Ширина круга */
+    height: 100px; /* Высота круга */
+    background-color: #5B6AF1; /* Цвет круга */
+    border-radius: 50%; /* Сделать круглым */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF; /* Цвет чисел внутри круга */
+    font-size: 50px; /* Размер чисел внутри круга */
+    font-weight: bold;
+}
+
+.custom-list li {
+    max-width: 75%;
+    counter-increment: custom-counter;
+}
+
+.features-image {
+    display: block;
+    width: 275px; /* Установите нужную ширину */
+    height: 275px; /* Автоматическое масштабирование высоты, чтобы сохранить пропорции */
+    margin-right: 50px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr auto; /* Один столбец занимает доступное пространство, второй - ширина содержимого */
+    grid-gap: 10px; /* Пространство между элементами */
+}
+.features-button {
+    text-align: center;
+}
+
+.benefits-grid {
+    margin-top: 200px;
+    display: grid;
+    /* grid-template-columns: 1fr auto; Первый столбец - ширина содержимого, второй - оставшееся пространство */
+    grid-gap: 20px; /* Пространство между элементами */
+    grid-template-areas: 
+    
+    "a b b" 
+    "c b b" ;
+}
+
+.benefits-block {
+    grid-area: a;
+    margin-left: 50px;
+    background-color: #02DBFF; /* Цвет фона блока */
+    width: 326px; /* Ширина блока */
+    height: 117px; /* Высота блока */
+    padding: 20px; /* Отступы внутри блока */
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size: 60px;
+    text-align: center;
+    line-height: 0px;
+    font-weight: bold;
+}
+
+.benefist-content {
+    grid-area: c;
+    font-size: 30px;
+    max-width: 75%;
+    margin-left: 50px;
+    position: relative;
+}
+
+.benefist-content::before {
+    content: ""; /* Добавление содержимого для псевдоэлемента */
+    position: absolute; /* Установка абсолютной позиции */
+    bottom: 0; /* Размещение псевдоэлемента внизу */
+    left: 0; /* Положение псевдоэлемента слева */
+    width: 100%; /* Ширина псевдоэлемента (равная ширине родительского элемента) */
+    height: 4px; /* Высота полоски */
+    background-color: black; /* Цвет полоски */
+    margin-bottom: 30px;
+}
+
+.benefist-imgage {
+    grid-area: b;
+    width: 696px;
+    height: 26px;
+    height: auto; /* Поддерживаем пропорции */
+}
+
+h1{
+    font-size: 60px;
+    text-align: center;
+}
+
+
+.speaker-section{
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+.speaker-text{
+    text-align: center;
+    font-size: 30px;
+}
+
+
+.speaker-container {
+    display: flex; /* Используем flexbox */
+    text-align: center;
+    justify-content: center;
+}
+
+.speaker-block {
+    position: relative;
+    width: 441px; /* Устанавливаем ширину блоков */
+    height: 286px; /* Устанавливаем высоту блоков */
+    margin-right: 20px; /* Добавляем отступы между блоками */
+    padding: 20px; /* Добавляем внутренние отступы */
+    font-size: 30px; /* Устанавливаем размер шрифта */
+    color: white; /* Устанавливаем цвет текста */
+    border-radius: 20px;
+    margin: 50px;
+}
+
+.speaker-block::before {
+    content: "";
+    position: absolute;
+    bottom: -85px;
+    right: -80px;
+    width: 235px; /* Ширина картинки */
+    height: 235px; /* Высота картинки */
+    background-size: cover;
+    z-index: 1; /* Поднять псевдоэлемент над содержимым блока */
+    
+}
+
+.speaker-block:nth-child(1)::before {
+    background-image: url('img/dog_1.png')
+}
+
+.speaker-block:nth-child(2)::before {
+    background-image: url('img/dog_2.png');
+}
+
+.speaker-block:nth-child(3)::before {
+    background-image: url('img/dog_3.png');
+}
+
+.speaker-block p {
+    margin: 0; /* Убираем внутренние отступы у абзацев */
+}
+
+
+.partner-section{
+    margin-bottom: 200px;
+}
+
+.partner-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 270px;
+}
+
+.VK{
+    margin-left: 250px;
+    font-size: 30px;
+    font-weight: 200;
+}
+
+.HH{
+    margin-right: 200px;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.testimonials-section{
+    margin-bottom: 200px;
+}
+
+.testimonial-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.testimonial-person{
+
+    margin-left: 200px;
+}
+.testimonial-block {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 600px;
+    height: 260px;
+    font-size: 30px;
+    position: relative;
+    
+}
+
+.testimonial-block p {
+    max-width: 85%;
+    position: absolute; /* Используем абсолютное позиционирование */
+    top: 20%; /* Перемещаем текст на 50% от верхнего края блока */
+    transform: translateY(10%); /* Корректируем позицию текста вниз */
+    transform: translateX(11%);
+    margin: 0; /* Убираем внешние отступы у текста */
+}
+
+.testimonial-img{
+    height: 100px;
+    width: 100px;
+}
+.testimonial-comment{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-gap: 30px
+}
+.comment{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 100px;
+    width: 470px;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+.contact{
+    margin-bottom: 200px;
+}
+
+.decor {
+    position: relative;
+    max-width: 600px;
+    background: white;
+    border-radius: 20px;
+    margin: 50px auto;
+
+}
+ 
+ .form-inner {
+    padding: 50px;
+ }
+ .form-inner input, .form-inner textarea {
+    display: block;
+    width: calc(100% - 40px);
+    padding: 0 20px;
+    margin-bottom: 10px;
+    background: #E9EFF6;
+    line-height: 100px;
+    border-width: 0;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+ }
+ .form-inner input[type="submit"] {
+    width: 100%;
+    margin-top: 30px;
+    background: #5B6AF1;
+    border-bottom: 4px solid #5B6AF1;
+    color: white;
+    font-size: 30px;
+    margin-left: auto; /* Выравнивание по центру */
+    margin-right: auto; /* Выравнивание по центру */
+ }
+ .form-inner textarea {
+    resize: none;
+ }
+ .form-inner h3 {
+    margin-top: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    color: #707981;
+ }
+
+
+ footer {
+    background-color: #ADB4F8; /* Цвет фона футера */
+    color: #fff; /* Цвет текста */
+    padding: 20px 0; /* Внутренние отступы сверху и снизу */
+}
+
+footer ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем внутренние отступы у списка */
+    text-align: center; /* Выравниваем элементы по центру */
+}
+
+footer ul li {
+    display: inline-block; /* Размещаем элементы в одной строке */
+    margin-right: 20px; /* Внешний отступ между элементами */
+}
+
+footer ul li:last-child {
+    margin-right: 0; /* Убираем внешний отступ у последнего элемента */
+}
+
+footer ul li a {
+    color: #fff; /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+.social-icons {
+    text-align: center; /* Выравниваем иконки по центру */
+    margin-top: 20px; /* Внешний отступ сверху */
+}
+
+.social-icons a {
+    display: inline-block; /* Размещаем иконки в одной строке */
+    margin-right: 10px; /* Внешний отступ между иконками */
+}
+
+.social-icons a:last-child {
+    margin-right: 0; /* Убираем внешний отступ у последней иконки */
+}
+
+.social-icons img {
+    width: 30px; /* Ширина иконок */
+    height: 30px; /* Высота иконок */
+}
